@@ -1,4 +1,4 @@
-Movie Theater Project
+#Movie Theater Project
 A dynamic web application that allows users to view movie details, see available tickets, and purchase tickets for movies.
 
 Features
