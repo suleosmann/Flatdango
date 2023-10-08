@@ -1,39 +1,58 @@
-#Movie Theater Project
-A dynamic web application that allows users to view movie details, see available tickets, and purchase tickets for movies.
+# Movie Theater Web Application
+## Overview
+This web application provides a simple interface for users to view a list of movies available in a theater, see details about a selected movie, and purchase tickets. The application is built using HTML, CSS, and JavaScript, and fetches movie data from a local server.
 
-Features
-View Movie Details: On page load, the details of the first movie are displayed, including its poster, title, runtime, showtime, and available tickets.
+##Features
+Movie Menu: Displays a list of all available movies. Movies that are sold out are highlighted in red.
+Movie Details: Shows details of the selected movie, including:
+#### Movie poster
+#### Title
+#### Runtime
+#### Showtime
+## Available tickets
+Buy Ticket Button: Allows users to purchase a ticket for the selected movie. If the movie is sold out, the button is disabled.
+## Setup
+## Prerequisites
+A web server to serve the application (e.g., Apache, Nginx).
+A local server or API endpoint that provides movie data in the specified format.
+## Installation
+Clone or download the repository to your local machine.
+Place the files in the appropriate directory of your web server.
+Ensure that the local server or API endpoint providing movie data is running and accessible from the application.
+Open a web browser and navigate to the location where the application is served.
+## Usage
+On page load, the application will display a list of movies on the left side.
+Click on any movie title to view its details on the right side.
+If tickets are available for the selected movie, you can click the "Buy Ticket" button to purchase a ticket. The number of available tickets will decrease by one.
+If the movie is sold out, the "Buy Ticket" button will be disabled.
+## Data Format
+The application expects movie data in the following JSON format:
 
-Movie Menu: A menu of all movies is displayed on the left side of the page. Users can click on any movie to view its details.
-
-Purchase Tickets: Users can buy tickets for a movie. The number of available tickets decreases upon purchase. If a movie is sold out, the "Buy Ticket" button is disabled and displays "Sold Out".
-
-Setup and Installation
-Clone the Repository:
-
-bash
+json
 Copy code
-git clone [your-repository-link]
-cd [your-repository-name]
-Install JSON Server (if not already installed):
+{
+    "films": [
+        {
+            "id": "1",
+            "title": "Movie Title",
+            "runtime": "108",
+            "capacity": 30,
+            "showtime": "04:00PM",
+            "tickets_sold": 27,
+            "description": "Movie description",
+            "poster": "URL to movie poster"
+        },
+        ...
+    ]
+}
+## Customization
+Styling: You can customize the look and feel of the application by modifying the styles.css file.
+Functionality: Additional features or modifications can be made in the script.js file.
+## License
+This project is open-source and free to use. Please provide appropriate attribution if you use or modify the code.
 
-bash
-Copy code
-npm install -g json-server
-Start the JSON Server:
+## Support
+For any issues or feature requests, please open an issue on the repository or contact the developer directly.
 
-bash
-Copy code
-json-server --watch db.json
-Open index.html in a Browser: Navigate to the project directory and open the index.html file in your preferred browser.
-
-Technologies Used
-HTML
-CSS
-JavaScript
-JSON Server
-Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-License
-MIT
+## Contributing
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
